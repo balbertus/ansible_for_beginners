@@ -1,0 +1,17 @@
+---
+- name: Debug Module Verbosity Control
+  hosts: all
+  become: yes
+  tasks:
+    - name: find uptime
+      shell: /usr/bin/uptime
+      register: result
+
+    - name: Get Operating System 
+      shell: cat /etc/redhat-release
+      register: result
+
+      #- name: Print debug message
+      #debug:
+      #var: result
+      # verbosity: 2

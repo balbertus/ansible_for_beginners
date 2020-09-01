@@ -1,0 +1,12 @@
+---
+- name: To Get Uptime command output
+  hosts: all
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+
+  tasks:
+    - name: Get uptime first
+      shell: uptime
+      register: hostname
+    - debug: 
+        var: hostname

@@ -1,0 +1,14 @@
+---
+- name: Uninstall apache2 on Ubuntu Server
+  hosts: dbservers
+  become: true
+  tasks: 
+  - name: stop apache2
+    service:
+      name: apache2
+      state: stopped
+
+  - name: unistall apache2
+    apt: 
+      name: apache2
+      state: absent

@@ -1,0 +1,9 @@
+[webservers]
+amazon-managed-node
+rhel-managed-node
+
+[appservers]
+rhel-managed-node
+
+[dbservers]
+ubuntu-managed-node
